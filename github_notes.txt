@@ -1,0 +1,21 @@
+Инициация и коммиты в ветку
+git init- Позволяет проинициализировать репозиторий в текущей папке
+git status- показывает текущий статус
+git add index.html​— добавляет index.html 
+git add .​— добавляет все файлы
+git commit- Сохраняет изменения в коммит
+git commit -m 'commit message'​— создает коммит с сообщением git branch
+
+Работа с ветками в репозитории
+git branch​— показывает список веток
+git branch branch-name​— создает новую ветку branch-name 
+git branch -D branch-name​— удаляет ветку branch-name
+git checkout Переключается на другую ветку
+git checkout branch-name​— переключается на последний коммит в ветке branch-name
+git checkout -b branch-name​— создает и переключается на ветку branch-name
+
+Работа с GITHUB
+git config --global user.name/user.password/user.email - отображение данных для связи с GitHub (какие сохранены)
+git config --global user.name/user.password/user.email "YOURTEXT" - замена имени, пароля и почты, для авторизации на GitHub
+git remote add origin https://github.com/"your repository" - связка вашего локального и глобального (github) бранча
+git push- отправляем наш локальный бранч на master/main (выбранный ранее)
