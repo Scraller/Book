@@ -23,3 +23,14 @@ def compute_cost2(records):
         s = Stock(*rec)
         total += s.shares * s.price 
     return total
+
+
+Stock = namedtuple('Stock', ['name', 'shares', 'price', 'date', 'time'])
+# Создание экземпляра прототипа
+stock_prototype = Stock('', 0, 0.0, None, None)
+# Функция для преобразования словаря в Stock
+def dict_to_stock(s):
+    return stock_prototype._replace(**s)
+
+a = {'name': 'ACME', 'shares': 100, 'price': 123.45} #Stock(name='ACME', shares=100, price=123.45, date=None, time=None)
+b = {'name': 'ACME', 'shares': 100, 'price': 123.45, 'date': '12/17/2012'} #Stock(name='ACME', shares=100, price=123.45, date='12/17/2012', time=None)
